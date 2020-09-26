@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400&display=swap" rel="stylesheet">
   <style>
@@ -67,7 +67,7 @@
     }
 
     .intro0 {
-    	padding:3em;
+      padding: 3em;
     }
 
     .intro0 p {
@@ -85,24 +85,44 @@
     }
 
     .blue {
-    	color: #29aae3;
+      color: #29aae3;
     }
 
     .blue.codrops-icon--drop {
-    	font-size:4em;
+      font-size: 4em;
+    }
+
+    .intro0 {
+      background-color: #fff;
+      //font-size: 2em;
+      position: relative;
+      z-index: 1000;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      align-items: center;
+      //height: 100vh;
+      text-align: center;
+      padding: 3em;
     }
 
     .intro2 {
+      position: relative;
       background-color: #fff;
-    font-size: 2em;
-    z-index: 1000;
-    height: 400px;
-    text-align: center;
-    margin: 0 0em;
-    justify-content: center;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+      font-size: 2em;
+      z-index: 1000;
+      height: 600px;
+      text-align: center;
+      margin: 0 0em;
+      justify-content: center;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      padding:3em;
     }
 
     .the-flex {
@@ -117,9 +137,105 @@
       align-items: center;
     }
     </style>
+    <!--Hey! This is the original version
+of Simple CSS Waves-->
+    <style>
+    .water-header {
+      position: absolute;
+      text-align: center;
+      /*background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);*/
+      color: white;
+      width: 100%;
+      bottom: -10px;
+    }
+
+    .inner-header {
+      height: 65vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex {
+      /*Flexbox for containers*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 15vh;
+      margin-bottom: -7px;
+      /*Fix for safari gap*/
+      min-height: 100px;
+      max-height: 150px;
+    }
+
+    .content {
+      position: relative;
+      height: 20vh;
+      text-align: center;
+      background-color: white;
+    }
+
+    /* Animation */
+
+    .parallax>use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+
+    .parallax>use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+
+    .parallax>use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+
+    .parallax>use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+
+    .parallax>use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
+
+    /*Shrinking for mobile*/
+    @media (max-width: 768px) {
+      .waves {
+        height: 40px;
+        min-height: 40px;
+      }
+
+      .content {
+        height: 30vh;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+    </style>
     <div class="intro0">
       <p class="light">
-      	<p class="blue codrops-icon codrops-icon--drop"><span >555</span></p>
+        <p class="blue codrops-icon codrops-icon--drop"><span>555</span></p>
         ในการบริหารจัดการงานวิจัย “การจัดการน้ำชุมชน” จึงต้องยึดเอา “คน” เป็นศูนย์กลาง ในการทำงานโดยเริ่มจากการทำให้คนในชุมชนเข้ามามีส่วนร่วมในการทำงานร่วมกัน ผ่านการเรียนรู้จนเกิดความเข้าใจบริบทและเห็นการเปลี่ยนแปลงที่เกิดขึ้นกับพื้นที่ รวมถึงต้องเชื่อมโยงกับข้อมูลปริมาณและคุณภาพน้ำ ความต้องการการใช้น้ำของชุมชนในทุกกลุ่มเป้าหมาย นำมาวิเคราะห์และกำหนดเป็นแผนการจัดการน้ำของชุมชนให้สอดคล้องกับบริบทและความเปลี่ยนแปลงที่เกิดขึ้นในแต่ละช่วงจังหวะเวลา แต่การที่จะทำให้คนในพื้นที่เกิดความเข้าใจและมาร่วมกันวางแผนการจัดการน้ำโดยชุมชนนั้น จำเป็นต้องใช้เครื่องมือการเก็บข้อมูลที่เน้นการมีส่วนร่วมของผู้เกี่ยวข้องทุกฝ่ายในชุมชน รวมถึงการวิเคราะห์สังเคราะห์ข้อมูลร่วมกันผ่านกระบวนการต่าง ๆ อย่างเป็นระบบ
       </p>
       </h2>
@@ -127,7 +243,24 @@
     <div class="intro">
       <blockquote><em>…การจัดการน้ำชุมชนนั้น เห็นความสำเร็จในบางชุมชนแล้วให้ชุมชนชาวบ้านที่มีความรู้ ประสบความสำเร็จ
           มีประสบการณ์จัดการและพัฒนาน้ำในพื้นที่ มาช่วยขยายผลไปยังชุมชนอื่น… <br /></em><span>นักวิจัยชุมชน</span></blockquote>
-      
+      <div class="water-header">
+        <!--Waves Container-->
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+        <!--Waves end-->
+      </div>
+      <!--Header ends-->
     </div>
     <div id="counter" class="intro2">
       <div class="the-flex">
@@ -148,135 +281,20 @@
       </h2>
     </div>
     <div class="intro">
-      <!--Hey! This is the original version
-of Simple CSS Waves-->
-      <style>
-      .water-header {
-        position: absolute;
-        text-align: center;
-        /*background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);*/
-        color: white;
-        width: 100%;
-        bottom: -10px;
-      }
-
-      .inner-header {
-        height: 65vh;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .flex {
-        /*Flexbox for containers*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .waves {
-        position: relative;
-        width: 100%;
-        height: 15vh;
-        margin-bottom: -7px;
-        /*Fix for safari gap*/
-        min-height: 100px;
-        max-height: 150px;
-      }
-
-      .content {
-        position: relative;
-        height: 20vh;
-        text-align: center;
-        background-color: white;
-      }
-
-      /* Animation */
-
-      .parallax>use {
-        animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-      }
-
-      .parallax>use:nth-child(1) {
-        animation-delay: -2s;
-        animation-duration: 7s;
-      }
-
-      .parallax>use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 10s;
-      }
-
-      .parallax>use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 13s;
-      }
-
-      .parallax>use:nth-child(4) {
-        animation-delay: -5s;
-        animation-duration: 20s;
-      }
-
-      @keyframes move-forever {
-        0% {
-          transform: translate3d(-90px, 0, 0);
-        }
-
-        100% {
-          transform: translate3d(85px, 0, 0);
-        }
-      }
-
-      /*Shrinking for mobile*/
-      @media (max-width: 768px) {
-        .waves {
-          height: 40px;
-          min-height: 40px;
-        }
-
-        .content {
-          height: 30vh;
-        }
-
-        h1 {
-          font-size: 24px;
-        }
-      }
-      </style>
-      <div class="water-header">
-        <!--Waves Container-->
-        <div>
-          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-          </svg>
-        </div>
-        <!--Waves end-->
-      </div>
-      <!--Header ends-->
+      <p class="text-intro">ผลการดำเนินงานโครงการวิจัยเรื่อง “โครงการแนวทางการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในระดับพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง จังหวัดกำแพงเพชร” ประกอบด้วย
+      </p>
     </div>
-    <div class="intro2">
-    	<h2>ผลการดำเนินงานโครงการวิจัยเรื่อง “โครงการแนวทางการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในระดับพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง จังหวัดกำแพงเพชร” ประกอบด้วย</h2>
+    <div class="intro2" style="height:700px">
+      <ul>
+        <li>(1) การศึกษารูปแบบ / กลไกการสร้างความร่วมมือระหว่างกลุ่มผู้บริหารใช้น้ำชลประทานและหน่วยงานองค์กรในการเพิ่มประสิทธิภาพการบริหารจัดการน้ำด้วยกระบวนการงานวิจัยเพื่อท้องถิ่น </li>
+        <li>(2) การศึกษาผลลัพธ์ ผลผลิต และผลกระทบจากการใช้น้ำอย่างรู้คุณค่าและมีธรรมาภิบาลที่เกิดจากการบริหารจัดการน้ำภายใต้โครงการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง</li>
+        <li>(3) การประมวลรูปแบบ/กลไก/วิธีการ การขยายผลกระบวนการเรียนรู้การเพิ่มประสิทธิภาพการบริหารจัดการน้ำในระดับพื้นที่ผ่านกระบวนการงานวิจัยเพื่อท้องถิ่นในพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง โดยมีรายละเอียดดังต่อไปนี้</li>
+      </ul>
     </div>
     <div class="container"></div>
     <div class="text">
       <section class="js-section" data-zoom-middle="2">
         <h2><span class="title-up">จังหวัดกำแพงเพชร</span><span class="title-down">การบริหารจัดการน้ำ</span></h2>
-        <p class="text-intro">ผลการดำเนินงานโครงการวิจัยเรื่อง “โครงการแนวทางการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในระดับพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง จังหวัดกำแพงเพชร” ประกอบด้วย
-          <ul>
-            <li>(1) การศึกษารูปแบบ / กลไกการสร้างความร่วมมือระหว่างกลุ่มผู้บริหารใช้น้ำชลประทานและหน่วยงานองค์กรในการเพิ่มประสิทธิภาพการบริหารจัดการน้ำด้วยกระบวนการงานวิจัยเพื่อท้องถิ่น </li>
-            <li>(2) การศึกษาผลลัพธ์ ผลผลิต และผลกระทบจากการใช้น้ำอย่างรู้คุณค่าและมีธรรมาภิบาลที่เกิดจากการบริหารจัดการน้ำภายใต้โครงการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง</li>
-            <li>(3) การประมวลรูปแบบ/กลไก/วิธีการ การขยายผลกระบวนการเรียนรู้การเพิ่มประสิทธิภาพการบริหารจัดการน้ำในระดับพื้นที่ผ่านกระบวนการงานวิจัยเพื่อท้องถิ่นในพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง โดยมีรายละเอียดดังต่อไปนี้</li>
-          </ul>
-        </p>
         <p class="text-intro">
           สรุปข้อมูลแหล่งน้ำธรรมชาติปี 2562 จังหวัดกำแพงเพชร </br>
           ในพื้นที่ 10 ตำบล 4 อำเภอ<br />
@@ -293,10 +311,9 @@ of Simple CSS Waves-->
             <li><b>ฝ่ายส่งน้ำและบำรุงรักษาท่อทองแดงที่ 3</b>
               <br />ตำบลนิคมทุ่งโพธิ์ทะเล ตำบลสระแก้ว อำเภอเมือง ตำบลหนองไม้กอง ตำบลมหาชัย อำเภอไทรงาม จังหวัดกำแพงเพชร</li>
           </ul>
-      </p>
-      <p>
-      	<h2><span class="title-up">ต้นทุน #1</span><span class="title-down">มีแหล่งน้ำธรรมชาติ</span></h2>
-
+        </p>
+        <p>
+          <h2><span class="title-up">ต้นทุน #1</span><span class="title-down">มีแหล่งน้ำธรรมชาติ</span></h2>
           <ul>
             <li>มีแหล่งน้ำธรรมชาติ จำนวน 377 แห่ง </li>
             <li>พื้นที่ 14,386 ไร่ </li>
@@ -313,8 +330,6 @@ of Simple CSS Waves-->
             <li>บึงสามัคคี 8 แห่ง </li>
           </ul>
         </p>
-
-
         <p>จากการดำเนินโครงการแนวทางการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในระดับพื้นที่โครงการส่งน้ำและบำรุงรักษาท่อทองแดง จังหวัดกำแพงเพชร พบว่า ปัจจัยในการบริหารจัดการน้ำเพื่อเพิ่มผลลัพธ์ (output) ผลผลิต (Outcome) และผลกระทบ (Impact) จากการดำเนินโครงการเพิ่มประสิทธิภาพการบริหารจัดการน้ำในพื้นที่ สิ่งสำคัญ คือ การสร้างการมีส่วนร่วมให้คนที่เกี่ยวข้องเข้ามาร่วมเรียนรู้เพื่อสร้างความสัมพันธ์ทั้งในแนวดิ่งและแนวราบ การเก็บรวบรวมและวิเคราะห์สังเคราะห์ข้อมูล และนำข้อมูลไปสู่การจัดทำแผนน้ำชุมชน</p>
         <p> โดยเงื่อนไขสำคัญในการจัดทำแผน 3 ระดับ คือ </p>
         <ol>
@@ -390,20 +405,20 @@ of Simple CSS Waves-->
         <h2><span class="title-up">ต้นทุน #2</span><span class="title-down"> พื้นที่ชลประทานและระบบชลประทานของจังหวัด</span></h2>
         <p>(1) ด้านฝั่งซ้าย หรือฝั่งตะวันออกของแม่น้ำปิง </p>
         <ul>
-            <li>(1.1) โครงการท่อทองแดง ตั้งอยู่ที่ ตำบลหนองปลิง อำเภอเมือง จังหวัดกำแพงเพชร มีพื้นที่ ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้น ประมาณ 457,058 ไร่</li>
-            <li>(1.2) โครงการวังบัว ตั้งอยู่ที่ ตำบลเทพนคร อำเภอเมือง จังหวัดกำแพงเพชร มีพื้นที่ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้น ประมาณ 443,938 ไร่</li>
-            <li>(1.3) โครงการวังยาง ตั้งอยู่ที่ ตำบลวังยาง อำเภอคลองขลุง จังหวัดกำแพงเพชร มีพื้นที่ ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้น ประมาณ 98,198 ไร่ </li>
-            <li>(1.4) โครงการหนองขวัญ ตั้งอยู่ที่ ตำบลวังแขม อำเภอคลองขลุง จังหวัดกำแพงเพชร มีพื้นที่ ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้นประมาณ 29,786 ไร่ </li>
-            <li>(1.5) โครงการอ่างเก็บน้ำป่าบง</li>
-            <li>ลานกระบือ 30 แห่ง </li>
-            <li>ทรายทองวัฒนา 28 แห่ง </li>
-            <li>ขาณุวรลักษบุรี 25 แห่ง </li>
-            <li>ไทรงาม 25 แห่ง </li>
-            <li>คลองลาน 13 แห่ง </li>
-            <li>ปางศิลาทอง 11 แห่ง </li>
-            <li>โกสัมพีนคร 9 แห่ง </li>
-            <li>บึงสามัคคี 8 แห่ง </li>
-          </ul>
+          <li>(1.1) โครงการท่อทองแดง ตั้งอยู่ที่ ตำบลหนองปลิง อำเภอเมือง จังหวัดกำแพงเพชร มีพื้นที่ ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้น ประมาณ 457,058 ไร่</li>
+          <li>(1.2) โครงการวังบัว ตั้งอยู่ที่ ตำบลเทพนคร อำเภอเมือง จังหวัดกำแพงเพชร มีพื้นที่ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้น ประมาณ 443,938 ไร่</li>
+          <li>(1.3) โครงการวังยาง ตั้งอยู่ที่ ตำบลวังยาง อำเภอคลองขลุง จังหวัดกำแพงเพชร มีพื้นที่ ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้น ประมาณ 98,198 ไร่ </li>
+          <li>(1.4) โครงการหนองขวัญ ตั้งอยู่ที่ ตำบลวังแขม อำเภอคลองขลุง จังหวัดกำแพงเพชร มีพื้นที่ ชลประทานส่งน้ำเพื่อการเกษตร รวมทั้งสิ้นประมาณ 29,786 ไร่ </li>
+          <li>(1.5) โครงการอ่างเก็บน้ำป่าบง</li>
+          <li>ลานกระบือ 30 แห่ง </li>
+          <li>ทรายทองวัฒนา 28 แห่ง </li>
+          <li>ขาณุวรลักษบุรี 25 แห่ง </li>
+          <li>ไทรงาม 25 แห่ง </li>
+          <li>คลองลาน 13 แห่ง </li>
+          <li>ปางศิลาทอง 11 แห่ง </li>
+          <li>โกสัมพีนคร 9 แห่ง </li>
+          <li>บึงสามัคคี 8 แห่ง </li>
+        </ul>
         <p>Gullfoss is one of the finest waterfalls in Europe, and it is only surpassed in grandeur, if at all, by one or two others in Iceland. We saw the falls at their best, for when we arrived the sun was shining brightly and a rainbow playing over the spray as it rose from the gorge. It is true that the sky clouded over afterwards, and that rain began to fall before we left Gullfoss, but we carried away the impression of the broken waters of the cascade sparkling in the sun, and of the colours of the rainbow playing on the spray over the ravine. The water has carved out a deep gorge in the basalt, and below the falls there are many good specimens of basaltic columns. In the lower part of the gorge there are the picturesque remains of a very fine hard dyke that has a much softer one beside it. These remains are to be seen on both sides of the river, and they have assumed the outline and form of a number of castellated buildings perched high upon prominent peaks.</p>
         <figure>
           <img src="img/journey/1.jpg" />
@@ -430,15 +445,46 @@ of Simple CSS Waves-->
         </p>
         มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ
       </section>
-      <section class="js-section" data-stay="true" data-zoom-start="0.8"></section>
-      <section class="js-section" data-stay="true" data-zoom-start="0.8"></section>
-      <section class="js-section" data-stay="true" data-zoom-start="0.8"></section>
-      <section class="js-section" data-stay="true" data-zoom-start="0.8"></section>
-      <section class="js-section" data-stay="true" data-zoom-start="0.8"></section>
+      <section class="js-section" data-stay="true" data-zoom-start="0.8">
+        <p>
+          <blockquote><em>มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</em><span> &mdash; นักวิจัยชุมชน</span></blockquote>
+        </p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ
+      </section>
+      <section class="js-section" data-stay="true" data-zoom-start="0.8">
+        <p>
+          <blockquote><em>มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</em><span> &mdash; นักวิจัยชุมชน</span></blockquote>
+        </p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ
+      </section>
+      <section class="js-section" data-stay="true" data-zoom-start="0.8">
+        <p>
+          <blockquote><em>มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</em><span> &mdash; นักวิจัยชุมชน</span></blockquote>
+        </p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ
+      </section>
+      <section class="js-section" data-stay="true" data-zoom-start="0.8">
+        <p>
+          <blockquote><em>มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</em><span> &mdash; นักวิจัยชุมชน</span></blockquote>
+        </p>
+        <p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</p>
+        <p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</p>
+      </section>
+      <section class="js-section" data-stay="true" data-zoom-start="0.8">
+         <p>
+          <blockquote><em>มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</em><span> &mdash; นักวิจัยชุมชน</span></blockquote>
+        </p>
+        <p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</p>
+        <p>
+        มีการมีส่วนร่วมในโครงการชลประทานในพื้นที่น้อย การกระจายตัวขององค์กรการจัดการน้ำต่ำ ส่งผลต่อศักยภาพในการพัฒนา ทำให้ค่า GPP ต่อปริมาณน้ำต้นทุนและต่อประชากรต่ำ เนื่องจากการขาดแคลนน้ำ ทำให้การทำการเกษตรต้องลดลงร่วมด้วย รวมทั้งมีการจัดสรรน้ำไม่สอดคล้องกับปริมาณน้ำในอ่างเก็บน้ำ</p>
+      </section>
     </div>
     <!-- Related demos -->
-    <section class="content content--related">
-      <p class="info">Filler text from <a href="http://www.gutenberg.org/ebooks/46772">William Bisiker's "Across Iceland"</a></p>
+    <section class="content content--related" style="display:none">
+      <!-- <p class="info">Filler text from <a href="http://www.gutenberg.org/ebooks/46772">William Bisiker's "Across Iceland"</a></p>
       <p><strong>If you enjoyed this demo you might also like:</strong></p>
       <a class="media-item" href="http://tympanus.net/Development/ArticleIntroEffects/">
         <img class="media-item__img" src="img/related/ArticleIntroEffects.png">
@@ -447,7 +493,7 @@ of Simple CSS Waves-->
       <a class="media-item" href="http://tympanus.net/Development/SlidingHeaderLayout/">
         <img class="media-item__img" src="img/related/SlidingHeaderLayout.jpg">
         <h3 class="media-item__title">Sliding Header Layout</h3>
-      </a>
+      </a> -->
     </section>
   </div>
   <!-- /main -->
